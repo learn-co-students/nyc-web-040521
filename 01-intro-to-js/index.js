@@ -29,9 +29,9 @@ console.log(sentence)
     // Index - Begins at 0
     // Use the indices to access the information
     
-let continents = ["Asia", "Europe", "Antartica"]
+let continents = ["Asia", "Europe", "Antarctica"]
     continents[0] // -> "Asia"
-    continents[2] // -> "Antartica"
+    continents[2] // -> "Antarctica"
 let booleans = [true, false]
     booleans[1] // -> false
 let integers = [0,1,2,3]
