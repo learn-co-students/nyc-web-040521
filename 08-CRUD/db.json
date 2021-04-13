@@ -1,0 +1,39 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "name": "Cinnamon",
+      "count": 5
+    },
+    {
+      "id": 2,
+      "name": "Chicken",
+      "count": 7
+    },
+    {
+      "name": "Doritos",
+      "count": 1,
+      "id": 3
+    },
+    {
+      "name": "Corn Chips",
+      "count": 1,
+      "id": 4
+    },
+    {
+      "name": "Doritos",
+      "count": 1,
+      "id": 5
+    },
+    {
+      "name": "Paprika",
+      "count": 1,
+      "id": 6
+    },
+    {
+      "name": "Dog Food",
+      "count": 1,
+      "id": 7
+    }
+  ]
+}
