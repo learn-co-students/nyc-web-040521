@@ -1,0 +1,3 @@
+{
+  "/spiceblends/:id": "/spiceblends/:id?_embed=ingredients"
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SpiceMaster</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script defer type="text/javascript" src="./src/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h3>SpiceMaster</h3>
+    </header>
+
+    <div id="spice-images">
+      <!-- Spice Blend Images Here (Advanced Deliverables -->
+    </div>
+
+    <!-- Spice Blend Details -->
+    <div id="spice-blend-detail">
+      <img class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
+      <h2 class="title">Insert Spice Blend Title Here</h2>
+
+      <div class="ingredients-container">
+        <h4>Ingredients:</h4>
+        <ul class="ingredients-list">
+          <!-- Add Spice Blend Ingredients Here -->
+        </ul>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Spice Blend Update Form -->
+    <form id="update-form" data-id="insert spiceblend ID" autocomplete="off">
+      <h4>Edit Spice Blend</h4>
+      <label for="title">New Title: </label>
+      <input type="text" name="title" id="spiceblend-title" />
+      <input type="submit" value="Update" />  
+    </form>
+
+    <!-- New Ingredient Form -->
+    <form id="ingredient-form" data-id="insert spiceblend ID" autocomplete="off">
+      <h4>Add Ingredient</h4>
+      <label for="name">Ingredient Name: </label>
+      <input type="text" name="name" id="ingredient-name" />
+      <input type="submit" value="Add Ingredient" />
+    </form>
+
+  </body>
+</html>

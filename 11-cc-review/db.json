@@ -1,0 +1,111 @@
+{
+  "spiceblends": [
+    {
+      "id": 1,
+      "title": "Italian",
+      "image": "./assets/spices/pumpkinspicelatte.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Za'atar",
+      "image": "./assets/spices/zaatar.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Garlic Pepper Salt",
+      "image": "./assets/spices/garlicsalt.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Five Spice",
+      "image": "./assets/spices/fivespice.jpg"
+    }
+  ],
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "Cinnamon",
+      "spiceblendId": 1
+    },
+    {
+      "id": 2,
+      "name": "Nutmeg",
+      "spiceblendId": 1
+    },
+    {
+      "id": 3,
+      "name": "Ginger",
+      "spiceblendId": 1
+    },
+    {
+      "id": 4,
+      "name": "Cloves",
+      "spiceblendId": 1
+    },
+    {
+      "id": 5,
+      "name": "Allspice",
+      "spiceblendId": 1
+    },
+    {
+      "id": 6,
+      "name": "Oregano",
+      "spiceblendId": 2
+    },
+    {
+      "id": 7,
+      "name": "Thyme",
+      "spiceblendId": 2
+    },
+    {
+      "id": 8,
+      "name": "Sumac",
+      "spiceblendId": 2
+    },
+    {
+      "id": 9,
+      "name": "Sesame",
+      "spiceblendId": 2
+    },
+    {
+      "id": 10,
+      "name": "Garlic Powder",
+      "spiceblendId": 3
+    },
+    {
+      "id": 11,
+      "name": "Salt",
+      "spiceblendId": 3
+    },
+    {
+      "id": 12,
+      "name": "Star Anise",
+      "spiceblendId": 4
+    },
+    {
+      "id": 13,
+      "name": "Cloves",
+      "spiceblendId": 4
+    },
+    {
+      "id": 14,
+      "name": "Chinese Cinnamon",
+      "spiceblendId": 4
+    },
+    {
+      "id": 15,
+      "name": "Sichuan Peppercorn",
+      "spiceblendId": 4
+    },
+    {
+      "id": 16,
+      "name": "Fennel Seeds",
+      "spiceblendId": 4
+    },
+    {
+      "name": "Pepper",
+      "spiceblendId": 3,
+      "id": 17
+    }
+  ]
+}
