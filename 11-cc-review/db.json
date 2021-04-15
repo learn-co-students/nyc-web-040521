@@ -2,12 +2,12 @@
   "spiceblends": [
     {
       "id": 1,
-      "title": "Italian",
+      "title": "Pumpkin Spice",
       "image": "./assets/spices/pumpkinspicelatte.jpg"
     },
     {
       "id": 2,
-      "title": "Za'atar",
+      "title": "Gingerbread Cookies",
       "image": "./assets/spices/zaatar.jpg"
     },
     {
@@ -106,6 +106,21 @@
       "name": "Pepper",
       "spiceblendId": 3,
       "id": 17
+    },
+    {
+      "name": "Pumpkin",
+      "spiceblendId": 1,
+      "id": 18
+    },
+    {
+      "name": "Coffee",
+      "spiceblendId": 1,
+      "id": 19
+    },
+    {
+      "name": "Water",
+      "spiceblendId": 1,
+      "id": 20
     }
   ]
 }
