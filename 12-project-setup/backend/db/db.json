@@ -1,0 +1,158 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "author": "Chinua Achebe",
+      "country": "Nigeria",
+      "language": "English",
+      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart",
+      "pages": 209,
+      "title": "Things Fall Apart",
+      "year": 1958,
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "author": "Hans Christian Andersen",
+      "country": "Denmark",
+      "language": "Danish",
+      "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.",
+      "pages": 784,
+      "title": "Fairy tales",
+      "year": 1836,
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "author": "Dante Alighieri",
+      "country": "Italy",
+      "language": "Italian",
+      "link": "https://en.wikipedia.org/wiki/Divine_Comedy",
+      "pages": 928,
+      "title": "The Divine Comedy",
+      "year": 1315,
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "author": "Jane Austen",
+      "country": "United Kingdom",
+      "language": "English",
+      "link": "https://en.wikipedia.org/wiki/Pride_and_Prejudice",
+      "pages": 226,
+      "title": "Pride and Prejudice",
+      "year": 1813,
+      "likes": 0
+    },
+    {
+      "id": 5,
+      "author": "Samuel Beckett",
+      "country": "Republic of Ireland",
+      "language": "French, English",
+      "link": "https://en.wikipedia.org/wiki/Molloy_(novel)",
+      "pages": 256,
+      "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
+      "year": 1952,
+      "likes": 0
+    },
+    {
+      "id": 6,
+      "author": "Giovanni Boccaccio",
+      "country": "Italy",
+      "language": "Italian",
+      "link": "https://en.wikipedia.org/wiki/The_Decameron",
+      "pages": 1024,
+      "title": "The Decameron",
+      "year": 1351,
+      "likes": 0
+    },
+    {
+      "id": 7,
+      "author": "Jorge Luis Borges",
+      "country": "Argentina",
+      "language": "Spanish",
+      "link": "https://en.wikipedia.org/wiki/Ficciones",
+      "pages": 224,
+      "title": "Ficciones",
+      "year": 1965,
+      "likes": 0
+    },
+    {
+      "id": 8,
+      "author": "Albert Camus",
+      "country": "Algeria, French Empire",
+      "language": "French",
+      "link": "https://en.wikipedia.org/wiki/The_Stranger_(novel)",
+      "pages": 185,
+      "title": "The Stranger",
+      "year": 1942,
+      "likes": 0
+    },
+    {
+      "id": 9,
+      "author": "Miguel de Cervantes",
+      "country": "Spain",
+      "language": "Spanish",
+      "link": "https://en.wikipedia.org/wiki/Don_Quixote",
+      "pages": 1056,
+      "title": "Don Quijote De La Mancha",
+      "year": 1610,
+      "likes": 0
+    },
+    {
+      "id": 10,
+      "author": "Geoffrey Chaucer",
+      "country": "England",
+      "language": "English",
+      "link": "https://en.wikipedia.org/wiki/The_Canterbury_Tales",
+      "pages": 544,
+      "title": "The Canterbury Tales",
+      "year": 1450,
+      "likes": 0
+    },
+    {
+      "id": 11,
+      "author": "Anton Chekhov",
+      "country": "Russia",
+      "language": "Russian",
+      "link": "https://en.wikipedia.org/wiki/List_of_short_stories_by_Anton_Chekhov",
+      "pages": 194,
+      "title": "Stories",
+      "year": 1886,
+      "likes": 0
+    },
+    {
+      "id": 12,
+      "author": "Joseph Conrad",
+      "country": "United Kingdom",
+      "language": "English",
+      "link": "https://en.wikipedia.org/wiki/Nostromo",
+      "pages": 320,
+      "title": "Nostromo",
+      "year": 1904,
+      "likes": 0
+    },
+    {
+      "id": 13,
+      "author": "Charles Dickens",
+      "country": "United Kingdom",
+      "language": "English",
+      "link": "https://en.wikipedia.org/wiki/Great_Expectations",
+      "pages": 194,
+      "title": "Great Expectations",
+      "year": 1861,
+      "likes": 0
+    },
+    {
+      "id": 14,
+      "author": "Denis Diderot",
+      "country": "France",
+      "language": "French",
+      "link": "https://en.wikipedia.org/wiki/Jacques_the_Fatalist",
+      "pages": 596,
+      "title": "Jacques the Fatalist",
+      "year": 1796,
+      "likes": 0
+    }
+  ]
+}
