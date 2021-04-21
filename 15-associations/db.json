@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Eric"
+    },
+    {
+      "id": 2,
+      "username": "Hasibul"
+    },
+    {
+      "username": "Justin",
+      "id": 3
+    },
+    {
+      "username": "Michelle",
+      "id": 4
+    },
+    {
+      "username": "Signe",
+      "id": 5
+    },
+    {
+      "username": "David",
+      "id": 6
+    }
+  ],
+  "lists": [
+    {
+      "id": 1,
+      "name": "Grocery",
+      "items": [
+        "Chicken",
+        "Beef",
+        "Sandwiches"
+      ],
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "Potential DJ Names",
+      "items": [
+        "Grandmaster Slamma Jamma",
+        "Smooth E"
+      ],
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "name": "Toys to Shop",
+      "items": [
+        "Rad bike",
+        "Animal Crossing"
+      ],
+      "userId": 2
+    },
+    {
+      "name": "Party Supplies",
+      "items": [],
+      "userId": 6,
+      "id": 5
+    },
+    {
+      "name": "JS",
+      "items": [],
+      "userId": 1,
+      "id": 7
+    }
+  ]
+}
