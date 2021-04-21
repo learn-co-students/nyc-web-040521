@@ -1,0 +1,49 @@
+h2#menu-heading {
+  background-color: royalblue;
+  color: lightseagreen;
+}
+
+#menu-heading {
+  background-color: forestgreen;
+  color: red;
+}
+
+.custom-b {
+  background-color: hotpink;
+  color:indigo
+}
+
+h2 {
+  background-color: darkturquoise;
+  color: green;
+}
+
+ul#burger-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+li.burger {
+  border: 1px black solid;
+  padding: 50px;
+  margin: 50px;
+  flex-basis: 30%;
+  text-align: center;
+  max-height: 25rem;
+  max-width: 25rem;
+  height: 20rem;
+  width: auto;  
+}
+
+li.burger img {
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+li.burger .burger_description{
+  height: 5rem;
+  overflow: scroll;
+}
