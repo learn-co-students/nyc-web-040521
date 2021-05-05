@@ -25,33 +25,39 @@ class PokemonPage extends React.Component {
     })
   }
 
-  searchPokemon = (userSearch) => {
+  searchPokemons = (userSearch) => {
+    // debugger
     this.setState({
       searchTerm: userSearch
     })
   }
 
-  addPokemon = (pokemonDataObj) => {
+  // displayPokemons = () => {
+  //   return this.state.pokemons.filter(pokemon => 
+  //     pokemon.name.startsWith(this.state.searchTerm))
+  // }
+
+  addPokemon = (pokemonData) => {
     // debugger
     let newPokemon = {
-      name: pokemonDataObj.name,
-      hp: pokemonDataObj.hp,
+      name: pokemonData.name,
+      hp: pokemonData.hp,
       sprites: {
-        front: pokemonDataObj.frontUrl,
-        back: pokemonDataObj.backUrl
+        front: pokemonData.frontUrl,
+        back: pokemonData.backUrl
       }
     }
 
     // this.setState({
-    //   // pokemons: [newPokemon, ...this.state.pokemons]
     //   pokemons: [...this.state.pokemons, newPokemon]
-
     // })
+
+    // console.log(newPokemon)
 
     fetch("http://localhost:3000/pokemon", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type":"application/json"
       },
       body: JSON.stringify(newPokemon)
     })
@@ -62,14 +68,32 @@ class PokemonPage extends React.Component {
       })
     })
 
+    // patch
+    // fetch("http://localhost:3000/pokemon/:pokemon-id", {
+    //   method: "PATCH",
+    //   headers: {
+    //     "Content-Type":"application/json"
+    //   },
+    //   body: JSON.stringify({
+    //     hp: 89
+    //   })
+    // })
+    // .then(res => res.json())
+    // .then(updatePokemon => {
+    //   // [{},{},{}]
+    //   this.setState({
+    //     pokemons: this.state.pokemons.map(pokemon => {
+    //       if(pokemon.id === updatePokemon.id) return updatePokemon
+    //       else return pokemon
+    //     })
+    //   })
+    // })
   }
 
   render() {
-    // console.log(this.state.pokemons)
 
-    // let displayPokemons = this.state.pokemons.filter(pokemon => pokemon.name.toLowerCase().startsWith(this.state.searchTerm.toLowerCase()))
-
-    let displayPokemons = this.state.pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+    let displayPokemons = this.state.pokemons.filter(pokemon => 
+      pokemon.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
 
     return (
       <Container>
@@ -77,9 +101,11 @@ class PokemonPage extends React.Component {
         <br />
         <PokemonForm addPokemon={this.addPokemon} />
         <br />
-        <Search searchPokemon={this.searchPokemon} />
+        <Search searchPokemons={this.searchPokemons} />
         <br />
+        {/* <PokemonCollection pokemons={this.displayPokemons()} /> */}
         <PokemonCollection pokemons={displayPokemons} />
+
       </Container>
     )
   }

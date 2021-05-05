@@ -1342,13 +1342,31 @@
       }
     },
     {
-      "name": "Oreo",
+      "name": "Charles",
       "hp": "80",
       "sprites": {
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
         "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png"
       },
       "id": 151
+    },
+    {
+      "name": "Charles",
+      "hp": "80",
+      "sprites": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
+        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png"
+      },
+      "id": 152
+    },
+    {
+      "name": "Oreo",
+      "hp": "80",
+      "sprites": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
+        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png"
+      },
+      "id": 153
     }
   ]
 }
