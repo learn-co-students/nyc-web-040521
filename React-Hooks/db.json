@@ -1,0 +1,51 @@
+{
+    "paintings":[
+    {
+        "id": "1",
+        "title": "Portrait of a Carthusian",
+        "image": "https://d32dm0rphc51dk.cloudfront.net/pVc7CubFzVlPhbErTAqyYg/medium.jpg",
+        "artist": {
+            "name": "Petrus Christus",
+            "birthday": "1410",
+            "deathday": "1475"
+        },
+        "votes": 64
+    },
+    {
+        "id": "2",
+        "title": "Study of a Young Woman",
+        "image":
+        "https://d32dm0rphc51dk.cloudfront.net/pLcp7hFbgtfYnmq-b_LXvg/medium.jpg",
+        "artist": {
+        "name": "Johannes Vermeer",
+        "birthday": "1632",
+        "deathday": "1675"
+        },
+        "votes": 21
+    },
+    {
+      "id": "3",
+      "title": "Portrait of Gerard de Lairesse",
+      "image":
+        "https://d32dm0rphc51dk.cloudfront.net/6b4QduWxeA1kSnrifgm2Zw/medium.jpg",
+      "artist": {
+        "name": "Rembrandt van Rijn",
+        "birthday": "1606",
+        "deathday": "1669"
+      },
+      "votes": 30
+    },
+    {
+      "id": "4",
+      "title": "Bust of Pseudo-Seneca",
+      "image":
+        "https://d32dm0rphc51dk.cloudfront.net/RcoWk2PHQq6yqX7dpSyt-g/medium.jpg",
+      "artist": {
+        "name": "Peter Paul Rubens",
+        "birthday": "1577",
+        "deathday": "1640"
+      },
+      "votes": 96
+    }
+    ]
+}
