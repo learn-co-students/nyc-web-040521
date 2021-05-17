@@ -126,3 +126,54 @@ def game_hash
     },
   }
 end
+
+def home_hash
+  game_hash[:home]
+end
+
+def home_players
+  game_hash[:home][:players]
+end
+
+def all_players
+  home_players + game_hash[:away][:players]
+end
+
+def find_player(player_name)
+  player = all_players.find do |player|
+    player[:player_name] == player_name
+  end
+end
+
+def num_points_scored(player_name)
+  # iterate over all the players and find the one specific player
+  player = find_player(player_name)
+
+  # return that player's number of points scored
+  player[:points]
+end
+
+def shoe_size(player_name)
+  find_player(player_name)[:shoe]
+end
+
+def team_colors(team_name)
+  # find the team
+  team_hash = game_hash.values.find do |team|
+    # team[1][:team_name] == team_name
+    team[:team_name] == team_name
+  end
+
+  # return the color
+  team_hash[:colors]
+end
+
+def team_names
+  # not - find, select
+  # maybe - each, map/collect
+  game_hash.values.map do |team_hash|
+    team_hash[:team_name]
+  end
+end
+
+# binding.pry
