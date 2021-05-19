@@ -39,7 +39,35 @@ What do the following mean in plain English? How about in programming?
 <summary>Domain</summary>
 <pre>Set of possible values within a realm; Domain name - string that defines a realm within the internet (ex. youtube.com, facebook.com, twitter.com)
 
+youtube.com
 
+- videos, comments, channels, users, playlists
+
+a video has many comments.
+a comment belongs to that one specific video.
+
+a channel has lots of videos.
+each video belongs to that channel.
+
+one user has many videos
+a video belongs to that one user
+
+a user has many channels
+a channel belongs one user
+
+
+
+twitter.com
+- tweets, media, ads, retweets, replies, direct messages, followers, users
+
+one tweet has many retweets
+each retweet belongs to a single tweet
+
+user has many dms
+each dm belongs to a user
+
+user has many tweets
+tweet belongs to one user
 </pre>
 </details>
 </p>
