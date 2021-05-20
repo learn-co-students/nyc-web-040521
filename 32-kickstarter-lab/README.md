@@ -45,6 +45,8 @@ with one another. This is not how you'd normally see specs for multiple objects.
 For the purposes of this lab, though, following the specs in order will
 eventually lead you to the correct relationships between your classes.
 
+backer -< projectBacker >- projets
+
 - When a `Backer` instance is initialized, it should be initialized with a name.
 
 - When a `Project` instance is initialized, it should be initialized with a
