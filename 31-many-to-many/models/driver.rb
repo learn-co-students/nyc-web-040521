@@ -18,4 +18,11 @@ class Driver
       ride_instance.driver == self
     end
   end
+
+  # ⭐️ passengers instance method. Driver has many passengers!
+  def passengers
+    self.rides.map do |ride_instance|
+      ride_instance.passenger
+    end
+  end
 end
