@@ -46,10 +46,10 @@ Intro to SQL
   D - Delete
 
 * How does an app like Instagram use CRUD?
-  - C
-  - R
-  - U
-  - D
+  - C - creating a comment
+  - R - read a post/s & pictures
+  - U - update a profile, update post
+  - D - delete a post
 
 
 
@@ -78,25 +78,67 @@ ___
 
 1. Write SQL to return all of the rows in the games table
 
+```sql
+SELECT * FROM games;
+```
+
+```sql
+SELECT title FROM games;
+```
 
 
 2. Write SQL to add a game to the games table
 
-
+```sql
+INSERT INTO games(title, genre, price)
+VALUES ("Cat Fight", "arcade", 1000000);
+```
 
 3. Write SQL to select the game with the title "Mario Kart 64"
 
+```sql
+SELECT * FROM games
+WHERE games.title = "Mario Kart 64";
+```
+
+```sql
+SELECT * FROM games
+WHERE games.title LIKE "mario Kart 64";
+```
+
+```sql
+SELECT * FROM games
+WHERE games.title LIKE "%mario%";
+```
 
 
 4. Write a SQL query to update the game with the ID of 1
 
+```sql
+UPDATE games
+SET price=10
+WHERE id=1;
+```
 
 
 5. Write SQL to display the games' titles next to their review ratings
 
+- what type of join?
+
+```sql
+SELECT games.title, reviews.rating, reviews.comment
+FROM games
+JOIN reviews on games.id = reviews.game_id;
+```
 
 
 
 6. Write SQL to display the games title next to their review ratings AND the player name
 
+```sql
+SELECT games.title, reviews.rating, reviews.comment, players.name
+FROM games
+JOIN reviews on games.id = reviews.game_id
+JOIN players on players.id = reviews.player_id;
+```
 
