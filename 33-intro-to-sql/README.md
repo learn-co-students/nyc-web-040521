@@ -124,6 +124,7 @@ WHERE id=1;
 5. Write SQL to display the games' titles next to their review ratings
 
 - what type of join?
+  - inner join
 
 ```sql
 SELECT games.title, reviews.rating, reviews.comment
