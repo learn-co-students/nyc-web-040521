@@ -11,7 +11,7 @@ function App(){
   let [toys, setToys] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:9292/toys")
+    fetch("http://localhost:3000/toys")
       .then(res => res.json())
       .then(toysArr => {
         console.log(toysArr)
