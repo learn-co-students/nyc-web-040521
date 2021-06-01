@@ -6,7 +6,7 @@ function ToyForm({addToy}){
 
     let handleSubmit = (e) => {
         e.preventDefault()
-        fetch("http://localhost:3000/toys", {
+        fetch("http://localhost:9292/toys", {
           method: "POST",
           headers: {
             "Content-type": "Application/json"
