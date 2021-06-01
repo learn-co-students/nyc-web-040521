@@ -30,6 +30,26 @@
 
 ----
 
+
+### General Workflow For Working In Teams
+
+1. One partner creates the repo
+2. Adds the partners as collaborators
+3. Each teammate clones the repo
+
+
+4. Create your own brach to work on a feature(`git checkout -b branch-name`)
+5. Code away!
+6. `git pull` on the main branch periodically to ensure your local main branch is synchronized with the remote main branch (you may merge the main branch into your feature branch afterwards if there were updates; this may make it easier to merge your feature branch into the main branch when it's time)
+7. Push your branch up to the remote repo (`git add .`, `git commit -m "some commit message here"`, `git push --set-upstream origin branch-name`(first push from the branch)/`git push`(subsequent pushes from the branch))
+8. Create a pull request on GitHub
+9. Review & accept the pull request to merge the code into the main branch
+10. `git pull` on the main branch
+11. Repeat steps 4 - 10
+
+
+----
+
 ## What Is Version Control?
 
 Developers working in teams are continually writing new code and changing existing code. Version control systems helps us keep track of our code changes over time as well as help us prevent concurrent work from conflicting when working with other developers! Using modern day version control systems, one developer on the team can be working on a new feature while another developer is fixing an unrelated bug at the same time. If we find a bug in our code, we can simply compare earlier versions of the code to help fix the mistake. 
