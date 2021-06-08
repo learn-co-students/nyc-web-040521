@@ -1,0 +1,455 @@
+Started GET "/" for ::1 at 2021-06-07 09:32:16 -0500
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 139.5ms | Allocations: 520)
+Completed 200 OK in 186ms (Views: 153.9ms | ActiveRecord: 0.0ms | Allocations: 4215)
+
+
+  [1m[35m (21.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOwners (20210607143559)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "owners" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210607143559"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDogs (20210607143750)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "dogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "breed" varchar, "owner_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210607143750"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-07 14:38:02.081518"], ["updated_at", "2021-06-07 14:38:02.081518"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/owners" for ::1 at 2021-06-07 09:44:03 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as */*
+Completed 500 Internal Server Error in 51022ms (ActiveRecord: 0.0ms | Allocations: 74821)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/owners_controller.rb:6:in `index'
+Started GET "/owners" for ::1 at 2021-06-07 09:45:17 -0500
+Processing by OwnersController#index as */*
+No template found for OwnersController#index, rendering head :no_content
+Completed 204 No Content in 14400ms (ActiveRecord: 0.0ms | Allocations: 15576)
+
+
+Started GET "/owners" for ::1 at 2021-06-07 09:45:57 -0500
+Processing by OwnersController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/owners_controller.rb:7:in `index'
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/owners_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 33949ms (ActiveRecord: 0.9ms | Allocations: 22576)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/owners_controller.rb:7:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mDog Load (0.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOwner Create (1.6ms)[0m  [1m[32mINSERT INTO "owners" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geddy"], ["age", 27], ["created_at", "2021-06-07 14:47:36.847723"], ["updated_at", "2021-06-07 14:47:36.847723"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOwner Create (0.8ms)[0m  [1m[32mINSERT INTO "owners" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Barak"], ["age", 27], ["created_at", "2021-06-07 14:47:36.856658"], ["updated_at", "2021-06-07 14:47:36.856658"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDog Create (0.8ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "age", "breed", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Raffy"], ["age", 5], ["breed", "mix"], ["owner_id", 2], ["created_at", "2021-06-07 14:47:36.904845"], ["updated_at", "2021-06-07 14:47:36.904845"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDog Create (0.7ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "age", "breed", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ciffore"], ["age", 6], ["breed", "pitBull"], ["owner_id", 1], ["created_at", "2021-06-07 14:47:36.913941"], ["updated_at", "2021-06-07 14:47:36.913941"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDog Create (0.8ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "age", "breed", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Richi"], ["age", 12], ["breed", "pug"], ["owner_id", 2], ["created_at", "2021-06-07 14:47:36.922974"], ["updated_at", "2021-06-07 14:47:36.922974"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/owners" for ::1 at 2021-06-07 09:47:52 -0500
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.9ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/owners_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 82263ms (ActiveRecord: 1.6ms | Allocations: 108244)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/owners_controller.rb:7:in `index'
+Started GET "/owners" for ::1 at 2021-06-07 09:49:33 -0500
+Processing by OwnersController#index as */*
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/owners_controller.rb:9:in `index'
+  [1m[36mOwner Load (9.8ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:9:in `index'
+Completed 200 OK in 536ms (Views: 442.0ms | ActiveRecord: 37.1ms | Allocations: 1587033)
+
+
+Started GET "/owners" for ::1 at 2021-06-07 09:51:12 -0500
+Processing by OwnersController#index as */*
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/owners_controller.rb:9:in `index'
+  [1m[36mOwner Load (28.7ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:9:in `index'
+Completed 200 OK in 679ms (Views: 575.9ms | ActiveRecord: 71.7ms | Allocations: 2189019)
+
+
+Started GET "/owners" for ::1 at 2021-06-07 09:56:29 -0500
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  Rendered owners/index.html.erb within layouts/application (Duration: 1392.8ms | Allocations: 8501004)
+  Rendered layout layouts/application.html.erb (Duration: 1396.3ms | Allocations: 8551247)
+Completed 500 Internal Server Error in 1516ms (Allocations: 9182528)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `name' for #<ActionView::Base:0x007fbc30740678>):
+    1: <h3> 
+    2:     <%= name %>
+    3: </h3>
+  
+app/views/owners/index.html.erb:2
+Started GET "/owners" for ::1 at 2021-06-07 09:57:27 -0500
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  Rendered owners/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 48220)
+  Rendered layout layouts/application.html.erb (Duration: 1185.1ms | Allocations: 3941959)
+Completed 200 OK in 1302ms (Views: 1226.0ms | Allocations: 4595992)
+
+
+Started GET "/owners" for ::1 at 2021-06-07 10:01:27 -0500
+Processing by OwnersController#vidhi as */*
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/owners_controller.rb:10:in `vidhi'
+  [1m[36mOwner Load (4.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:10:in `vidhi'
+Completed 200 OK in 821ms (Views: 709.5ms | ActiveRecord: 49.9ms | Allocations: 2635609)
+
+
+Started GET "/owners/2" for ::1 at 2021-06-08 09:10:39 -0500
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mOwner Load (7.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ (byebug):1:in `show'
+Completed 500 Internal Server Error in 59523ms (ActiveRecord: 16.1ms | Allocations: 93507)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/owners_controller.rb:15:in `show'
+Started GET "/owners/2" for ::1 at 2021-06-08 09:14:17 -0500
+Processing by OwnersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35m (17.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/owners_controller.rb:15:in `show'
+  [1m[36mOwner Load (3.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:15:in `show'
+Completed 200 OK in 1107ms (Views: 69.3ms | ActiveRecord: 77.5ms | Allocations: 1963465)
+
+
+Started GET "/owners/2" for ::1 at 2021-06-08 09:18:05 -0500
+Processing by OwnersController#show as */*
+  Parameters: {"sean"=>"2"}
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/owners_controller.rb:15:in `show'
+  [1m[36mOwner Load (16.7ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:15:in `show'
+Completed 200 OK in 2400ms (Views: 836.0ms | ActiveRecord: 95.1ms | Allocations: 2110758)
+
+
+Started POST "/owners" for ::1 at 2021-06-08 09:22:54 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#create as */*
+  Parameters: {"name"=>"Vidhi", "age"=>28, "owner"=>{"name"=>"Vidhi", "age"=>28}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 14ms (ActiveRecord: 40.6ms | Allocations: 63471)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.3.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.3.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.3.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3.2) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3.2) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3.2) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/owners" for ::1 at 2021-06-08 09:27:02 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#create as */*
+  Parameters: {"name"=>"Vidhi", "age"=>28, "owner"=>{"name"=>"Vidhi", "age"=>28}}
+[31mUnpermitted parameter: :owner[0m
+[31mUnpermitted parameters: :name, :age, :owner[0m
+[31mUnpermitted parameters: :name, :age, :owner[0m
+Completed 500 Internal Server Error in 852741ms (ActiveRecord: 23.1ms | Allocations: 274556)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/owners_controller.rb:22:in `create'
+Started POST "/owners" for ::1 at 2021-06-08 09:42:40 -0500
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#create as */*
+  Parameters: {"name"=>"Vidhi", "age"=>28, "owner"=>{"name"=>"Vidhi", "age"=>28}}
+[31mUnpermitted parameter: :owner[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:22:in `create'
+  [1m[36mOwner Create (7.4ms)[0m  [1m[32mINSERT INTO "owners" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Vidhi"], ["age", 28], ["created_at", "2021-06-08 14:42:47.516634"], ["updated_at", "2021-06-08 14:42:47.516634"]]
+  ↳ app/controllers/owners_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:22:in `create'
+Completed 200 OK in 1281ms (Views: 51.2ms | ActiveRecord: 79.8ms | Allocations: 2308577)
+
+
+Started PATCH "/owners/3" for ::1 at 2021-06-08 09:46:38 -0500
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#update as */*
+  Parameters: {"name"=>"Vidhi s.", "id"=>"3", "owner"=>{"name"=>"Vidhi s."}}
+[31mUnpermitted parameters: :id, :owner[0m
+Completed 500 Internal Server Error in 73421ms (ActiveRecord: 32.7ms | Allocations: 60726)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/owners_controller.rb:28:in `update'
+Started PATCH "/owners/3" for ::1 at 2021-06-08 09:48:52 -0500
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#update as */*
+  Parameters: {"name"=>"Vidhi s.", "id"=>"3", "owner"=>{"name"=>"Vidhi s."}}
+  [1m[36mOwner Load (33.8ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:28:in `update'
+[31mUnpermitted parameters: :id, :owner[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:29:in `update'
+  [1m[36mOwner Update (7.7ms)[0m  [1m[33mUPDATE "owners" SET "name" = ?, "updated_at" = ? WHERE "owners"."id" = ?[0m  [["name", "Vidhi s."], ["updated_at", "2021-06-08 14:49:00.844875"], ["id", 3]]
+  ↳ app/controllers/owners_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:29:in `update'
+Completed 200 OK in 1038ms (Views: 35.2ms | ActiveRecord: 101.1ms | Allocations: 2420024)
+
+
+Started PATCH "/owners/3" for ::1 at 2021-06-08 09:52:41 -0500
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#update as */*
+  Parameters: {"name"=>"Vidhi", "id"=>"3", "owner"=>{"name"=>"Vidhi"}}
+  [1m[36mOwner Load (5.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:38:in `find_owner'
+Completed 500 Internal Server Error in 2241ms (ActiveRecord: 34.2ms | Allocations: 8373124)
+
+
+  
+NameError (undefined local variable or method `owner' for #<OwnersController:0x007f946fab2ee8>):
+  
+app/controllers/owners_controller.rb:31:in `update'
+Started PATCH "/owners/3" for ::1 at 2021-06-08 09:54:16 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#update as */*
+  Parameters: {"name"=>"Vidhi", "id"=>"3", "owner"=>{"name"=>"Vidhi"}}
+  [1m[36mOwner Load (3.7ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:39:in `find_owner'
+[31mUnpermitted parameters: :id, :owner[0m
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:32:in `update'
+  [1m[36mOwner Update (17.7ms)[0m  [1m[33mUPDATE "owners" SET "name" = ?, "updated_at" = ? WHERE "owners"."id" = ?[0m  [["name", "Vidhi"], ["updated_at", "2021-06-08 14:54:25.136883"], ["id", 3]]
+  ↳ app/controllers/owners_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:32:in `update'
+Completed 200 OK in 1155ms (Views: 33.2ms | ActiveRecord: 153.3ms | Allocations: 2667441)
+
+
+Started GET "/owners/3" for ::1 at 2021-06-08 10:07:29 -0500
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#show as */*
+  Parameters: {"name"=>"Vidhi", "id"=>"3", "owner"=>{"name"=>"Vidhi"}}
+  [1m[36mOwner Load (2.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:39:in `find_owner'
+Completed 200 OK in 820ms (Views: 85.7ms | ActiveRecord: 16.5ms | Allocations: 1145322)
+
+
+Started PATCH "/owners/3" for ::1 at 2021-06-08 10:09:01 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#update as */*
+  Parameters: {"name"=>"Vidhi", "id"=>"3", "owner"=>{"name"=>"Vidhi"}}
+  [1m[36mOwner Load (2.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:43:in `find_owner'
+[31mUnpermitted parameters: :id, :owner[0m
+Completed 200 OK in 402ms (Views: 13.3ms | ActiveRecord: 44.7ms | Allocations: 1452691)
+
+
+Started DELETE "/owners/3" for ::1 at 2021-06-08 10:09:35 -0500
+Processing by OwnersController#destroy as */*
+  Parameters: {"name"=>"Vidhi", "id"=>"3", "owner"=>{"name"=>"Vidhi"}}
+Completed 500 Internal Server Error in 17632ms (ActiveRecord: 0.0ms | Allocations: 45106)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `destroy'
+app/controllers/owners_controller.rb:38:in `destroy'
+Started DELETE "/owners/3" for ::1 at 2021-06-08 10:10:57 -0500
+  [1m[35m (117.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#destroy as */*
+  Parameters: {"name"=>"Vidhi", "id"=>"3", "owner"=>{"name"=>"Vidhi"}}
+  [1m[36mOwner Load (4.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:45:in `find_owner'
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:38:in `destroy'
+  [1m[36mOwner Destroy (8.0ms)[0m  [1m[31mDELETE FROM "owners" WHERE "owners"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/owners_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:38:in `destroy'
+Completed 200 OK in 960ms (Views: 4.3ms | ActiveRecord: 318.6ms | Allocations: 2047205)
+
+
+Started GET "/owners" for ::1 at 2021-06-08 10:15:31 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#index as */*
+  Parameters: {"name"=>"Vidhi", "owner"=>{"name"=>"Vidhi"}}
+  [1m[36mOwner Load (1.8ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:14:in `index'
+Completed 200 OK in 365ms (Views: 330.8ms | ActiveRecord: 50.9ms | Allocations: 1261078)
+
+
+Started GET "/owners" for ::1 at 2021-06-08 10:18:03 -0500
+  
+SyntaxError (/Users/vidhi.sharma/Desktop/dog_app/app/controllers/owners_controller.rb:5: syntax error, unexpected '(', expecting end
+    after_action :after_run(results)
+                           ^):
+  
+app/controllers/owners_controller.rb:5: syntax error, unexpected '(', expecting end
+app/controllers/owners_controller.rb:5: syntax error, unexpected '(', expecting end
+app/controllers/owners_controller.rb:5: syntax error, unexpected '(', expecting end
+Started GET "/owners" for ::1 at 2021-06-08 10:18:32 -0500
+  
+SyntaxError (/Users/vidhi.sharma/Desktop/dog_app/app/controllers/owners_controller.rb:5: syntax error, unexpected '(', expecting end
+    after_action :after_run(@results)
+                           ^):
+  
+app/controllers/owners_controller.rb:5: syntax error, unexpected '(', expecting end
+app/controllers/owners_controller.rb:5: syntax error, unexpected '(', expecting end
+app/controllers/owners_controller.rb:5: syntax error, unexpected '(', expecting end
+Started GET "/owners" for ::1 at 2021-06-08 10:19:48 -0500
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#index as */*
+  Parameters: {"name"=>"Vidhi", "owner"=>{"name"=>"Vidhi"}}
+  [1m[36mOwner Load (18.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:15:in `index'
+Completed 200 OK in 435ms (Views: 360.6ms | ActiveRecord: 71.4ms | Allocations: 1254694)
+
+
+Started GET "/owners" for ::1 at 2021-06-08 10:20:53 -0500
+  [1m[35m (24.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OwnersController#index as */*
+  Parameters: {"name"=>"Vidhi", "owner"=>{"name"=>"Vidhi"}}
+  [1m[36mOwner Load (8.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:15:in `index'
+Completed 200 OK in 607ms (Views: 556.7ms | ActiveRecord: 73.9ms | Allocations: 1249564)
+
+
