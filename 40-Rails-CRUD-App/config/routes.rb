@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   # resources :owners, only: [:index, :show, :create, :update, :delete]
 
+  resources :dogs, only: [:index, :show, :create, :update, :delete]
+
 
 
   
