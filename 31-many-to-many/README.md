@@ -111,13 +111,13 @@ __2. Create Driver Class__
 
 - Implement single source of truth
     - `@@all == []`
-    - Passenger.all method
+    - Driver.all method
 
 __3. Create Ride Class__
 
 - Implement single source of truth
     - `@@all == []`
-    - Passenger.all method
+    - Ride.all method
 - Ride >- Passenger
     - Therefore, Ride needs to have a reference to the Passenger it belongs to
     - We can do this by passing in a Passenger instance to `initialize` when we create a new instance of Ride
